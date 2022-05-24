@@ -5,7 +5,15 @@ A .htaccess samples project
 
 ## Setup local dev
 
-Run: ```sass --watch styles.scss:dist/styles.min.css```
-Run: ```docker build -t my-apache2 .```
-Run: ```docker run -dit --name my-running-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ my-apache2```
-Go to: http://localhost:8080/
+*Prerequesites*
+
+- [Docker installed](https://docs.docker.com/engine/install/)
+
+*Run from project root*
+
+- ```docker build -t my-apache2 .```
+- ```docker run -dit --name my-running-app -p 8080:80 -v $PWD/dist:/usr/local/apache2/htdocs/ my-apache2```
+- ```npm ci````
+- ```npm run build```
+- Go to: http://localhost:8080/
+- Re-run ```npm run build``` for any changes
