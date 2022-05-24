@@ -14,16 +14,17 @@
   },
   "homepage": "https://github.com/ionos-deploy-now/.htaccess-samples#readme",
   "scripts": {
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 styles.scss dist/styles.css",
-    "css-minify": "cleancss --format breaksWith=lf --output dist/styles.min.css dist/styles.css",
-    "build": "npm run compile-styles && npm run css-minify",
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/styles/styles.scss src/styles/styles.css",
+    "css-minify": "cleancss --format breaksWith=lf --output src/styles/styles.min.css src/styles/styles.css",
+    "build": "npm run compile-styles && npm run css-minify && cpy . '../dist/' --cwd=src",
     "clean-up": "del-cli --force node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.0",
-    "del-cli": "^4.0.1",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "cpy-cli": "^4.1.0",
+    "del-cli": "^4.0.1"
   },
   "engines": {
     "node": ">=16"
