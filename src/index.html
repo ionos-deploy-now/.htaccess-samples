@@ -77,8 +77,17 @@
         <ul>
             <li>
                 <a href="/security/headers/">HTTP Security Headers</a>
-                <a class="more" href="https://securityheaders.com/" target="_blank">
-                    [scan your site]
+                <a class="more"
+                    id="resultF"
+                    href="https://securityheaders.com"
+                    target="_blank">
+                    [F]
+                </a>
+                <a class="more"
+                    id="resultA"
+                    href="https://securityheaders.com"
+                    target="_blank">
+                    [A+]
                 </a>
             </li>
             <li><a href="/security/disable-dir-view">Disable directory view<a></li>
@@ -106,3 +115,10 @@
         </p>
     </div>
 </body>
+
+<script>
+    document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on'; 
+    document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on'; 
+</script>
+
+</html>
