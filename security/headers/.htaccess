@@ -1,0 +1,63 @@
+# https://httpd.apache.org/docs/current/mod/mod_headers.html
+# https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+<IfModule mod_headers.c>
+
+	# https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-frame-options
+    # Prevent clickjacking by ensuring that pages are not embeddable into other sites
+	Header set X-Frame-Options: "DENY"
+
+	# https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#x-content-type-options
+    # Prevent content sniffing (MIME sniffing)
+	Header set X-Content-Type-Options: "nosniff"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#referrer-policy
+    # Restrict any refferer information
+    Header set Referrer-Policy: "strict-origin-when-cross-origin"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#strict-transport-security
+    # Prevent any protocol downgrade attacks and cookie hijacking and use strictly HTTPS; HSTS headers over HTTP are ignored!
+    Header set Strict-Transport-Security: "max-age=63072000; includeSubDomains; preload"
+
+    # https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
+    #
+    Header set Content-Security-Policy: "script-src 'self'"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#access-control-allow-origin
+    # Detect and mitigate certain several types of attacks, including Cross-Site Scripting (XSS) and data injection attacks
+    # Replace '*' with your origin
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-opener-policy
+    # Prevent from a set of cross-origin attacks dubbed XS-Leaks
+    Header set Cross-Origin-Opener-Policy: "same-origin"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-resource-policy
+    #
+    Header set Cross-Origin-Resource-Policy: "same-origin"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#cross-origin-embedder-policy
+    # Prevent from loading any cross-origin resources that isn't explicitly granted
+    Header set Cross-Origin-Embedder-Policy: "require-corp"
+
+    # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#floc-federated-learning-of-cohorts
+    #
+    Header set Permissions-Policy: "interest-cohort=()"
+
+    # Remove response headers that leak information 
+    Header unset ETag
+    # Header unset Server # not possible to unset; Apache decided to force the Server header regardless of this configuration
+    Header unset X-Powered-By
+
+    # https://owasp.org/www-project-secure-headers/#clear-site-data
+    # Clear browsing data associated with the requesting website
+    Header set Clear-Site-Data: "cache, cookies, storage, executionContexts"
+
+	# https://owasp.org/www-project-secure-headers/#cache-control
+    # Caching allowed with a cache duration of one week
+	<FilesMatch "\.(js|css|jpg|jpeg|png|svg|webp|gif|ico|ogg|mp4|webm)$">
+		Header set Cache-Control max-age=604800
+	</FilesMatch>
+
+</IfModule>

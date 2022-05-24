@@ -1,0 +1,97 @@
+$color: #ffffff;
+$background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $color;
+    background-image: $background;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: $color;
+}
+
+h1 {
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bold;
+    line-height: 40px;
+    letter-spacing: 2px;
+    span {
+        font-weight: 100;
+    }
+}
+
+h2 {
+    text-align: left;
+    font-size: x-large;
+    font-weight: bold;
+    a {
+        font-weight: normal;
+        font-size: small;
+    }
+}
+
+a:link {
+    color: $color;
+    text-decoration: none;
+}
+
+a:visited {
+    color: $color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color;
+    text-decoration: underline;
+}
+
+a:active {
+    color: $color;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.header {
+    text-align: right;
+}
+
+.container {
+    margin: 0 25vw 0 25vw;
+    padding: 1vh 5vw 1vh 5vw;
+    border-radius: 2em;
+
+    @media screen and (max-width: 1000px) {
+        margin: 0 5vw 0 5vw;
+        padding: 1vh 5vw 1vh 5vw;
+    }
+
+    background: red;
+}
+
+.more {
+    font-weight: normal;
+    font-size: small;
+}
+
+#github {
+    font-size: 4em;
+    color: #ffffff;
+    margin: 0.4em;
+}
+
+#github:hover {
+    color: #d4d4d4;
+}

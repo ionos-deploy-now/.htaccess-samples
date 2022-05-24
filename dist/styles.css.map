@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"../styles.scss"
+	],
+	"sourcesContent": [
+		"$color: #ffffff;\n$background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);\n\nbody {\n    margin: 0;\n    padding: 0;\n    color: $color;\n    background-image: $background;\n    background-size: 100% 100vh;\n    background-repeat: no-repeat;\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n\nh1,\nh2,\nh3 {\n    color: $color;\n}\n\nh1 {\n    text-align: center;\n    font-size: 42px;\n    font-weight: bold;\n    padding-top: 2em;\n    line-height: 40px;\n    letter-spacing: 2px;\n    span {\n        font-weight: 100;\n    }\n}\n\na:link {\n    color: $color;\n    text-decoration: none;\n}\n\na:visited {\n    color: $color;\n    text-decoration: none;\n}\n\na:hover {\n    color: $color;\n    text-decoration: underline;\n}\n\na:active {\n    color: $color;\n    text-decoration: underline;\n}\n\np {\n    font-size: 14px;\n    font-style: normal;\n    font-weight: normal;\n}\n\n.container {\n    margin: 0 25vw 0 25vw;\n    padding: 1vh 5vw 1vh 5vw;\n\n    @media screen and (max-width: 900px) {\n        margin: 0 5vw 0 5vw;\n        padding: 1vh 5vw 1vh 5vw;\n    }\n\n    background: red;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAGA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,KAAK,EAND,OAAO;EAOX,gBAAgB,EANP,oDAAoD;EAO7D,eAAe,EAAE,UAAU;EAC3B,iBAAiB,EAAE,SAAS;EAC5B,WAAW,EAAE,6BAA6B;CAC7C;;AAED,AAAA,EAAE;AACF,EAAE;AACF,EAAE,CAAC;EACC,KAAK,EAhBD,OAAO;CAiBd;;AAED,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,GAAG;EAChB,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,GAAG;CAItB;;AAVD,AAOI,EAPF,CAOE,IAAI,CAAC;EACD,WAAW,EAAE,GAAG;CACnB;;AAGL,AAAA,CAAC,AAAA,KAAK,CAAC;EACH,KAAK,EAhCD,OAAO;EAiCX,eAAe,EAAE,IAAI;CACxB;;AAED,AAAA,CAAC,AAAA,QAAQ,CAAC;EACN,KAAK,EArCD,OAAO;EAsCX,eAAe,EAAE,IAAI;CACxB;;AAED,AAAA,CAAC,AAAA,MAAM,CAAC;EACJ,KAAK,EA1CD,OAAO;EA2CX,eAAe,EAAE,SAAS;CAC7B;;AAED,AAAA,CAAC,AAAA,OAAO,CAAC;EACL,KAAK,EA/CD,OAAO;EAgDX,eAAe,EAAE,SAAS;CAC7B;;AAED,AAAA,CAAC,CAAC;EACE,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;CACtB;;AAED,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,aAAa;EACrB,OAAO,EAAE,eAAe;EAOxB,UAAU,EAAE,GAAG;CAClB;;AANG,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAJvC,AAAA,UAAU,CAAC;IAKH,MAAM,EAAE,WAAW;IACnB,OAAO,EAAE,eAAe;GAI/B"
+}

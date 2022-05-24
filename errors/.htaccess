@@ -1,0 +1,19 @@
+# https://httpd.apache.org/docs/current/mod/mod_rewrite.html
+<IfModule mod_rewrite.c>
+
+    # build a custom 200 page that is able to expose Apache internals; use with caution!
+    <If "%{REQUEST_URI} =~ m#/errors/env.html#">
+        RewriteEngine On
+        ErrorDocument 200 "<html><body><h1>Custom 200 build with .htaccess</h1><ul><li>THE_REQUEST = %{THE_REQUEST}</li><li>REMOTE_HOST = %{REMOTE_HOST}</li><li>DOCUMENT_ROOT = %{DOCUMENT_ROOT}</li><li><a href='https://httpd.apache.org/docs/current/expr.html#vars' target='_blank'>list of available vars</a></li></ul></body>"
+        RewriteRule ^ - [L,R=200]
+    </If>
+
+    # show Apache default errors while entering the following sites /errors/40x
+    Redirect 400 /errors/400
+    Redirect 401 /errors/401
+    Redirect 404 /errors/404
+
+    # customize the following http codes
+    ErrorDocument 401 "Error 401 - Unauthorized request!"
+    ErrorDocument 404 "/errors/404.html"
+</IfModule>

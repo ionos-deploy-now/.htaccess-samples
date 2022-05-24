@@ -1,0 +1,6 @@
+# https://httpd.apache.org/docs/current/mod/mod_autoindex.html
+# https://httpd.apache.org/docs/current/content-negotiation.html
+<IfModule mod_autoindex.c>
+    # disable directory and multi views
+    Options -MultiViews -Indexes
+</IfModule>

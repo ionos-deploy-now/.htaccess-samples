@@ -1,0 +1,9 @@
+# https://httpd.apache.org/docs/current/mod/mod_autoindex.html
+<IfModule mod_autoindex.c>
+    # enable directory views
+    Options +Indexes
+    # https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions
+    IndexOptions Charset=UTF-8
+    IndexOptions HTMLTable
+    IndexOptions FancyIndexing
+</IfModule>

@@ -1,0 +1,5 @@
+# https://httpd.apache.org/docs/current/mod/core.html
+<filesMatch "\.(html|css|js)$">
+    # https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+    AddDefaultCharset UTF-8
+</filesMatch>
