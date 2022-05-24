@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "A .htaccess samples project",
   "main": "index.html",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/octonouts/htaccess-samples.git"
-  },
   "keywords": [
     "htaccess",
     "samples"
@@ -14,9 +10,9 @@
   "author": "Markus Hunsalz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/octonouts/htaccess-samples/issues"
+    "url": "https://github.com/ionos-deploy-now/.htaccess-samples/issues"
   },
-  "homepage": "https://github.com/octonouts/htaccess-samples#readme",
+  "homepage": "https://github.com/ionos-deploy-now/.htaccess-samples#readme",
   "scripts": {
     "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 styles.scss dist/styles.css",
     "css-minify": "cleancss --format breaksWith=lf --output dist/styles.min.css dist/styles.css",
@@ -28,5 +24,8 @@
     "clean-css-cli": "^5.6.0",
     "del-cli": "^4.0.1",
     "node-sass": "^7.0.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }

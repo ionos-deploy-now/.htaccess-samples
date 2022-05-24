@@ -1,7 +1,7 @@
 # .htaccess-samples
 A .htaccess samples project
 
-[![Deploy Now](https://github.com/ionos-deploy-now/.htaccess-samples/actions/workflows/deploy-now.yaml/badge.svg)](https://github.com/octonouts/ionos-htaccess/actions/workflows/deploy-now.yaml)
+[![Deploy Now](https://github.com/ionos-deploy-now/.htaccess-samples/actions/workflows/deploy-now.yaml/badge.svg)](https://github.com/ionos-deploy-now/.htaccess-samples/actions/workflows/deploy-now.yaml)
 
 ## Setup local dev
 
