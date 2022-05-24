@@ -5,7 +5,7 @@ A .htaccess samples project
 
 ## Setup local dev
 
-*Prerequesites*
+*Prerequisites*
 
 - [Docker installed](https://docs.docker.com/engine/install/)
 
