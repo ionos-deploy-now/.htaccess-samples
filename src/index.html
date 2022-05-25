@@ -24,6 +24,45 @@
     <h1>.htaccess <span class="thin">samples</span></h1>
 
     <div class="container">
+
+        <p>
+        <h2>redirects <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[more]</a>
+        </h2>
+        <p>
+            <b>Note</b>: Open the web development tool of your browser to see what's happening!
+        </p>
+        <ul>
+            <li><a href="/redirects/content/index.html">Serve an existing file</a></li>
+            <li><a href="/redirects/content/">Serve index.html when dir contains an index.html file</a></li>
+            <li><a href="/redirects/">Redirect to base dir when dir does not contain any index.html file</a></li>
+            <li><a href="/redirects/does-not-exist.html">Redirect to base dir when file resource does not exist</a></li>
+            <li><a href="/redirects/does-not-exist/">Redirect to base dir when dir resource does not exist</a></li>
+            <li>
+                <a href="/redirects/content/old-index.html">Http 301 - Moved permanently</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/rewrite/remapping.html" target="_blank">
+                    [more]
+                </a>
+            </li>
+
+        </ul>
+        </p>
+
+        <p>
+        <h2>security</h2>
+        <ul>
+            <li>
+                <a href="/security/headers/">HTTP Security Headers</a>
+                <a class="more" id="resultF" href="https://securityheaders.com" target="_blank">
+                    [F]
+                </a>
+                <a class="more" id="resultA" href="https://securityheaders.com" target="_blank">
+                    [A+]
+                </a>
+            </li>
+            <li><a href="/security/disable-dir-view">Disable directory view</a></li>
+        </ul>
+        </p>
+
         <p>
         <h2>errors <a href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument"
                 target="_blank">[more]</a></h2>
@@ -53,48 +92,6 @@
         </p>
 
         <p>
-        <h2>redirects <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[more]</a>
-        </h2>
-        <ul>
-            <li><a href="/redirects/content/index.html">Serve an existing file</a></li>
-            <li><a href="/redirects/content/">Serve index.html when dir contains an index.html file</a></li>
-            <li><a href="/redirects/">Redirect to base dir when dir does not contain any index.html file</a></li>
-            <li><a href="/redirects/does-not-exist.html">Redirect to base dir when file resource does not exist</a></li>
-            <li><a href="/redirects/does-not-exist/">Redirect to base dir when dir resource does not exist</a></li>
-            <li>
-                <a href="/redirects/content/old-index.html">Http 301 - Moved permanently</a>
-                <a class="more" href="https://httpd.apache.org/docs/current/rewrite/remapping.html" target="_blank">
-                    [more]
-                </a>
-            </li>
-
-        </ul>
-        </p>
-
-        <p>
-        <h2>security</a>
-        </h2>
-        <ul>
-            <li>
-                <a href="/security/headers/">HTTP Security Headers</a>
-                <a class="more"
-                    id="resultF"
-                    href="https://securityheaders.com"
-                    target="_blank">
-                    [F]
-                </a>
-                <a class="more"
-                    id="resultA"
-                    href="https://securityheaders.com"
-                    target="_blank">
-                    [A+]
-                </a>
-            </li>
-            <li><a href="/security/disable-dir-view">Disable directory view<a></li>
-        </ul>
-        </p>
-
-        <p>
         <h2>compression</h2>
         <ul>
             <li>todo</li>
@@ -106,10 +103,10 @@
         <ul>
             <li><a href="/php/phpinfo.php">Output phpinfo()</a></li>
             <li><a href="/custom-dir-view/">Custom directory view<a>
-                <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions"
-                    target="_blank">
-                    [more]
-                </a>
+                        <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions"
+                            target="_blank">
+                            [more]
+                        </a>
             </li>
         </ul>
         </p>
@@ -117,7 +114,7 @@
 </body>
 
 <script>
-    document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on'; 
+    document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on';
     document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2F&followRedirects=on'; 
 </script>
 
