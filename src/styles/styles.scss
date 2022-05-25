@@ -6,7 +6,7 @@ body {
     padding: 0;
     color: $color;
     background-image: $background;
-    background-size: 100% 100vh;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     font-family: "Source Sans Pro", sans-serif;
 }
@@ -69,16 +69,16 @@ p {
 }
 
 .container {
-    margin: 0 25vw 0 25vw;
+    margin: 0 25vw 10vh 25vw;
     padding: 1vh 5vw 1vh 5vw;
     border-radius: 2em;
 
     @media screen and (max-width: 1000px) {
-        margin: 0 5vw 0 5vw;
+        margin: 0 5vw 5vh 5vw;
         padding: 1vh 5vw 1vh 5vw;
     }
 
-    background: red;
+    background: #28B463;
 }
 
 .more {
