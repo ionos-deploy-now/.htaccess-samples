@@ -14,9 +14,10 @@
   },
   "homepage": "https://github.com/ionos-deploy-now/.htaccess-samples#readme",
   "scripts": {
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/styles/styles.scss src/styles/styles.css",
-    "css-minify": "cleancss --format breaksWith=lf --output src/styles/styles.min.css src/styles/styles.css",
-    "build": "npm run compile-styles && npm run css-minify && cpy . '../dist/' --cwd=src",
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/styles/styles.scss dist/styles/styles.css",
+    "css-minify": "cleancss --format breaksWith=lf --output dist/styles/styles.min.css dist/styles/styles.css",
+    "src2dist": "cpy . '../dist/' --cwd=src",
+    "build": "npm run compile-styles && npm run css-minify && npm run src2dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
