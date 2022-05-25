@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>.htaccess samples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content=".htaccess Apache">
+    <meta name="description" content="A .htaccess sample project">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <a id="github" class="fa fa-github-square" href="https://github.com/ionos-deploy-now/.htaccess-samples"
+            target="_blank"></a>
+    </div>
+
+    <h1>.htaccess <span class="thin">samples</span></h1>
+
+    <div class="container">
+
+        <p>
+        <h2>redirects <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[more]</a>
+        </h2>
+        <p>
+            <b>Note</b>: Open the web development tool of your browser to see what's happening!
+        </p>
+        <ul>
+            <li><a href="/redirects/content/index.html">Serve an existing file</a></li>
+            <li><a href="/redirects/content/">Serve index.html when dir contains an index.html file</a></li>
+            <li><a href="/redirects/">Redirect to base dir when dir does not contain any index.html file</a></li>
+            <li><a href="/redirects/does-not-exist.html">Redirect to base dir when file resource does not exist</a></li>
+            <li><a href="/redirects/does-not-exist/">Redirect to base dir when dir resource does not exist</a></li>
+            <li>
+                <a href="/redirects/content/old-index.html">Http 301 - Moved permanently</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/rewrite/remapping.html" target="_blank">
+                    [more]
+                </a>
+            </li>
+
+        </ul>
+        </p>
+
+        <p>
+        <h2>security</h2>
+        <p>
+            <b>Note</b>: Open the web development tool of your browser to see what's happening!
+        </p>
+        <ul>
+            <li>
+                <a href="/security/headers/">HTTP Security Headers</a>
+                <a class="more" href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+                    target="_blank">
+                    [OWASP Cheat Sheet]
+                </a>
+                <a class="more" id="resultF" href="https://securityheaders.com" target="_blank">
+                    [F]
+                </a>
+                <a class="more" id="resultA" href="https://securityheaders.com" target="_blank">
+                    [A+]
+                </a>
+            </li>
+            <li><a href="/security/disable-dir-view">Disable directory view</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html" target="_blank">
+                    [more]
+                </a>
+            </li>
+        </ul>
+        </p>
+
+        <p>
+        <h2>errors <a href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument"
+                target="_blank">[more]</a></h2>
+        <ul>
+            <li><a href="/errors/env.html">200 - Show Apache internals; use with caution!</a></li>
+            <li><a href="/errors/400">400 - Show a default Apache error page</a></li>
+            <li><a href="/errors/401">401 - Show a custom error message</a></li>
+            <li><a href="/errors/404.html">404 - Show a custom error page</a></li>
+        </ul>
+        </p>
+
+        <p>
+        <h2>encoding <a href="https://httpd.apache.org/docs/current/en/mod/core.html#adddefaultcharset"
+                target="_blank">[more]</a></h2>
+        <ul>
+            <li><a href="/encoding/encoding.html">Right: Declaring always character encodings in HTML</a></li>
+            <li>
+                <a href="/encoding/missing_encoding.html">Wrong: Servers following strict RFC Http&#47;1.1 will encode
+                    ISO-8859-1 by default</a>
+            </li>
+            <li>
+                <a href="/encoding/fix/missing_encoding.html">Fallback: Declare chartset=UTF-8 directive via
+                    .htaccess
+                </a>
+            </li>
+        </ul>
+        </p>
+
+        <p>
+        <h2>compression</h2>
+        <ul>
+            <li>todo</li>
+        </ul>
+        </p>
+
+        <p>
+        <h2>misc</h2>
+        <ul>
+            <li><a href="/php/phpinfo.php">Output phpinfo()</a>
+                <a class="more" href="https://www.php.net/manual/en/function.phpinfo.php" target="_blank">
+                    [more]
+                </a>
+            </li>
+            <li>
+                <a href="/custom-dir-view/">Custom directory view<a>
+                        <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions"
+                            target="_blank">
+                            [more]
+                        </a>
+            </li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+<script>
+    document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on';
+    document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2F&followRedirects=on'; 
+</script>
+
+</html>
