@@ -69,11 +69,11 @@ p {
 }
 
 .container {
-    margin: 0 25vw 10vh 25vw;
+    margin: 0 15vw 10vh 15vw;
     padding: 1vh 5vw 1vh 5vw;
     border-radius: 2em;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1200px) {
         margin: 0 5vw 5vh 5vw;
         padding: 1vh 5vw 1vh 5vw;
     }
