@@ -18,8 +18,6 @@
 
 <IfModule mod_rewrite.c>
 
-    RewriteEngine on
-
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteCond %{REQUEST_FILENAME}\.gz -f
     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.gz [L]

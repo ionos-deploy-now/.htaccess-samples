@@ -19,8 +19,6 @@
 
 <IfModule mod_rewrite.c>
 
-    RewriteEngine on
-
     RewriteCond %{HTTP:Accept-Encoding} br
     RewriteCond %{REQUEST_FILENAME}\.br -f
     RewriteRule \.(css|ics|js|json|html|svg)$ %{REQUEST_URI}.br [L]
