@@ -24,32 +24,61 @@
 
     <div class="container">
 
+        <div>
+            <h2>Redirects 
+                <a href="https://en.wikipedia.org/wiki/URL_redirection" target="_blank">[URL redirection]</a>
+                <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
+            </h2>
+        </div>
         <p>
-        <h2>Redirects <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[more]</a>
-        </h2>
-        <p>
-            <b>Note</b>: Open the web development tool of your browser to see what's happening!
+            <b>Note</b>: Open the web development tool of your browser to see what's happening on network level!
         </p>
         <ul>
-            <li><a href="/redirects/content/index.html">Serve an existing file</a></li>
-            <li><a href="/redirects/content/">Serve index.html when dir contains an index.html file</a></li>
-            <li><a href="/redirects/">Redirect to base dir when dir does not contain any index.html file</a></li>
-            <li><a href="/redirects/does-not-exist.html">Redirect to base dir when file resource does not exist</a></li>
-            <li><a href="/redirects/does-not-exist/">Redirect to base dir when dir resource does not exist</a></li>
             <li>
-                <a href="/redirects/content/old-index.html">Http 301 - Moved permanently</a>
-                <a class="more" href="https://httpd.apache.org/docs/current/rewrite/remapping.html" target="_blank">
-                    [more]
+                <a href="/redirect/content/old-index.html">Browse to a file that moved permanently. Redirect to a new location:</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_301" target="_blank">
+                [HTTP 301]
                 </a>
             </li>
-
+            <li>
+                <a href="/redirect/does-not-exist.html">Browse to a file that doesn't exist. Redirect to base dir:</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_302" target="_blank">
+                [HTTP 302]
+                </a>
+            </li>
+            <li>
+                <a href="/redirect/does-not-exist/">Browse to a directory that doesn't exist. Redirect to base.</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_302" target="_blank">
+                [HTTP 302]
+                </a>
+            </li>
+            <li>
+                <a href="/redirect/">Browse to a directory without an index.html file. Redirect to base dir.</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_302" target="_blank">
+                [HTTP 302]
+                </a>
+            </li>
         </ul>
+        
+        <div>
+            <h2>Rewrites
+                <a href="https://en.wikipedia.org/wiki/Rewrite_engine" target="_blank">[URL rewriting]</a>
+                <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
+            </h2>
+        </div>
+        <p>
+            <b>Note</b>: Open the web development tool of your browser to see what's happening on network level!
         </p>
+        <ul>
+            <li><a href="/rewrite/content/index.html">Browse to an existing file. Rewrite nothing.</a></li>         
+            <li><a href="/rewrite/content/">Browse to a directory. Rewrite to index.html file.</a></li>
+        </ul>
 
+        <div>
+            <h2>Security</h2>
+        </div>
         <p>
-        <h2>Security</h2>
-        <p>
-            <b>Note</b>: Open the web development tool of your browser to see what's happening!
+            <b>Note</b>: Open the web development tool of your browser to see what's happening on network level!
         </p>
         <ul>
             <li>
@@ -71,13 +100,16 @@
                 </a>
             </li>
         </ul>
-        </p>
 
-        <h2>Performance</h2>
-        <p>
-            <b>Note</b>: Open the web development tool of your browser to see what's happening! </br>
-            Alternative you can verify compression and do a speed test <a class="more" href="https://www.giftofspeed.com/" target="_blank">[here]</a>.
-        </p>
+        <div>
+            <h2>Performance</h2>
+        </div>
+        <div>
+            <b>Note</b>: Open the web development tool of your browser to see what's happening on network level!
+            <p>
+                Alternative you can verify compression and do a speed test <a class="more" href="https://www.giftofspeed.com/" target="_blank">[here]</a>.
+            </p>
+        </div>
         <ul>
             <li>
                 <a href="/performance/no-compression/index.html">
@@ -98,20 +130,39 @@
             </li>
         </ul>
 
-        <p>
-        <h2>Errors <a href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument"
-                target="_blank">[more]</a></h2>
+        <div>
+            <h2>Errors <a href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument" target="_blank">[more]</a></h2>
+        </div>
         <ul>
-            <li><a href="/errors/env.html">200 - Show Apache internals; use with caution!</a></li>
-            <li><a href="/errors/400">400 - Show a default Apache error page</a></li>
-            <li><a href="/errors/401">401 - Show a custom error message</a></li>
-            <li><a href="/errors/404.html">404 - Show a custom error page</a></li>
+            <li>
+                <a href="/errors/400">Show a default Apache error page.</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_400" target="_blank">
+                    [HTTP 400]
+                </a>
+            </li>
+            <li>
+                <a href="/errors/401">Show a custom error message.</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_401" target="_blank">
+                    [HTTP 401]
+                </a>
+            </li>
+            <li>
+                <a href="/errors/404.html">Show a custom error page.</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">
+                    [HTTP 404]
+                </a>
+            </li>
+            <li>
+                <a href="/errors/env.html">Show a custom error page that exposes internals.</a>Use with caution!
+                <a class="more" href="https://en.wikipedia.org/wiki/HTTP_200" target="_blank">
+                    [HTTP 200]
+                </a>
+            </li>
         </ul>
-        </p>
 
-        <p>
-        <h2>Encoding <a href="https://httpd.apache.org/docs/current/en/mod/core.html#adddefaultcharset"
-                target="_blank">[more]</a></h2>
+        <div>
+            <h2>Encoding <a href="https://httpd.apache.org/docs/current/en/mod/core.html#adddefaultcharset" target="_blank">[more]</a></h2>
+        </div>
         <ul>
             <li><a href="/encoding/encoding.html">Declare always character encodings in HTML</a></li>
             <li>
@@ -121,31 +172,28 @@
                 <a href="/encoding/fix/missing_encoding.html">Declare chartset=UTF-8 directive via .htaccess</a>
             </li>
         </ul>
-        </p>
 
-        <p>
-        <h2>Misc</h2>
+        <div>
+            <h2>Misc</h2>
+        </div>
         <ul>
-            <li><a href="/php/phpinfo.php">Output phpinfo()</a>
+            <li><a href="/misc/php/phpinfo.php">Output phpinfo()</a>
                 <a class="more" href="https://www.php.net/manual/en/function.phpinfo.php" target="_blank">
                     [more]
                 </a>
             </li>
             <li>
-                <a href="/custom-dir-view/">Custom directory view<a>
-                        <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions"
-                            target="_blank">
-                            [more]
-                        </a>
+                <a href="/misc/custom-dir-view/">Custom directory view</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_autoindex.html#indexoptions" target="_blank">
+                [more]
+                </a>
             </li>
         </ul>
-        </p>
     </div>
+
+    <script>
+        document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on';
+        document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2F&followRedirects=on'; 
+    </script>
 </body>
-
-<script>
-    document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on';
-    document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2F&followRedirects=on'; 
-</script>
-
 </html>
