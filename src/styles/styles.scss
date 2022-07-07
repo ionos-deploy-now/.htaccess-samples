@@ -1,9 +1,11 @@
 $color: #ffffff;
 $background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
 
+html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     color: $color;
     background-image: $background;
     background-size: 100% 100%;
@@ -69,7 +71,14 @@ p {
     font-weight: 300;
 }
 
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
 .header {
+    flex: 0 1 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,7 +86,8 @@ p {
     width: 100%;
 }
 
-.container {
+.content {
+    flex: 1 1 auto;
     margin: 0 10vw 0 10vw;
     padding: 2vh 5vw 2vh 5vw;
     border-radius: 2em;
@@ -85,6 +95,12 @@ p {
     @media screen and (max-width: 800px) {
         margin: 0 5vw 0 5vw;
     }
+}
+
+.footer {
+    flex: 0 1 auto;
+    margin: 1em 0 1em 0;
+    text-align: center;
 }
 
 .space {
