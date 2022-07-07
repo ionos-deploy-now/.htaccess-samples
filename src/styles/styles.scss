@@ -9,20 +9,26 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     font-family: "Roboto", sans-serif;
+    font-size: 1.5vw;
+    font-weight: normal;
 }
 
 h1,
 h2,
 h3 {
+    margin: 0;
+    padding: 0;
     color: $color;
 }
 
 h1 {
+    margin: 1em 0 1em 0;
     text-align: center;
-    font-size: xxx-large;
+    font-size: 4vw;
     font-weight: bold;
-    line-height: 40px;
     letter-spacing: 2px;
+    font-weight: 600;
+    white-space: nowrap;
     span {
         font-weight: 100;
     }
@@ -30,7 +36,7 @@ h1 {
 
 h2 {
     text-align: left;
-    font-size: x-large;
+    font-size: 2vw;
     font-weight: bold;
     a {
         font-weight: normal;
@@ -59,37 +65,42 @@ a:active {
 }
 
 p {
-    font-size: 14px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
 }
 
 .header {
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .container {
-    margin: 0 15vw 10vh 15vw;
-    padding: 1vh 5vw 1vh 5vw;
+    margin: 0 10vw 0 10vw;
+    padding: 2vh 5vw 2vh 5vw;
     border-radius: 2em;
-
-    @media screen and (max-width: 1200px) {
-        margin: 0 5vw 5vh 5vw;
-        padding: 1vh 5vw 1vh 5vw;
+    background: #08f;
+    @media screen and (max-width: 800px) {
+        margin: 0 5vw 0 5vw;
     }
+}
 
-    background: #08F;
+.space {
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .more {
-    font-weight: normal;
-    font-size: small;
+    font-weight: 300;
+    font-size: 1vw;
 }
 
 #github {
-    font-size: 4em;
     color: #ffffff;
-    margin: 0.4em;
+    font-size: 4vw;
 }
 
 #github:hover {

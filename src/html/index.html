@@ -16,18 +16,21 @@
 </head>
 
 <body>
+
     <div class="header">
-        <a id="github" class="fa fa-github-square" href="https://github.com/ionos-deploy-now/.htaccess-samples" target="_blank"></a>
+        <div class="space"></div>
+        <h1>.htaccess <span class="thin">samples</span></h1>
+        <div class="space">
+            <a id="github" class="fa fa-github-square" href="https://github.com/ionos-deploy-now/.htaccess-samples" target="_blank"></a>
+        </div>  
     </div>
-
-    <h1>.htaccess <span class="thin">samples</span></h1>
-
+    
     <div class="container">
 
         <div>
             <h2>Redirects 
-                <a href="https://en.wikipedia.org/wiki/URL_redirection" target="_blank">[URL redirection]</a>
-                <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/URL_redirection" target="_blank">[URL redirection]</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
             </h2>
         </div>
         <p>
@@ -62,8 +65,8 @@
         
         <div>
             <h2>Rewrites
-                <a href="https://en.wikipedia.org/wiki/Rewrite_engine" target="_blank">[URL rewriting]</a>
-                <a href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
+                <a class="more" href="https://en.wikipedia.org/wiki/Rewrite_engine" target="_blank">[URL rewriting]</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/mod/mod_rewrite.html" target="_blank">[mod_rewrite]</a>
             </h2>
         </div>
         <p>
@@ -105,12 +108,12 @@
         <div>
             <h2>Performance</h2>
         </div>
-        <div>
+        <p>
             <b>Note</b>: Open the web development tool of your browser to see what's happening on network level!
             <p>
                 Alternative you can verify compression and do a speed test <a class="more" href="https://www.giftofspeed.com/" target="_blank">[here]</a>.
             </p>
-        </div>
+        </p>
         <ul>
             <li>
                 <a href="/performance/no-compression/index.html">
@@ -132,7 +135,9 @@
         </ul>
 
         <div>
-            <h2>Errors <a href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument" target="_blank">[more]</a></h2>
+            <h2>Errors
+                <a class="more" href="https://httpd.apache.org/docs/current/en/mod/core.html#errordocument" target="_blank">[more]</a>
+            </h2>
         </div>
         <ul>
             <li>
@@ -162,15 +167,26 @@
         </ul>
 
         <div>
-            <h2>Encoding <a href="https://httpd.apache.org/docs/current/en/mod/core.html#adddefaultcharset" target="_blank">[more]</a></h2>
+            <h2>Encoding</h2>
         </div>
         <ul>
-            <li><a href="/encoding/encoding.html">Declare always character encodings in HTML</a></li>
             <li>
-                <a href="/encoding/missing_encoding.html">RFC Http&#47;1.1 encodes ISO-8859-1 by default</a>
+                <a href="/encoding/encoding.html">Use always in-document character encoding in HTML</a>                
+                <a class="more" href="https://www.w3.org/International/questions/qa-html-encoding-declarations" target="_blank">
+                    [more]
+                </a>     
             </li>
             <li>
-                <a href="/encoding/fix/missing_encoding.html">Declare chartset=UTF-8 directive via .htaccess</a>
+                <a href="/encoding/missing_encoding.html">By default RFC Http&#47;1.1 encodes ISO-8859-1</a>
+                <a class="more" href="https://datatracker.ietf.org/doc/html/rfc2616#section-3.7.1" target="_blank">
+                    [RFC 2616]
+                </a>
+            </li>
+            <li>
+                <a href="/encoding/fix/missing_encoding.html">Use UTF-8 charset encoding to HTTP header in addition</a>
+                <a class="more" href="https://httpd.apache.org/docs/current/en/mod/core.html#adddefaultcharset" target="_blank">
+                    [more]
+                </a>
             </li>
         </ul>
 
