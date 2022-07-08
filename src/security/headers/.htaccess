@@ -20,7 +20,7 @@
 
     # https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
     #
-    Header set Content-Security-Policy: "default-src 'self'"
+    Header set Content-Security-Policy: "default-src 'self'; style-src 'self'"
 
     # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#access-control-allow-origin
     # Detect and mitigate certain several types of attacks, including Cross-Site Scripting (XSS) and data injection attacks
