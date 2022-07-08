@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/ionos-deploy-now/.htaccess-samples#readme",
   "scripts": {
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/styles/styles.scss dist/styles/styles.css",
-    "css-minify": "cleancss --format breaksWith=lf --output dist/styles/styles.min.css dist/styles/styles.css",
+    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/assets/styles/styles.scss dist/assets/styles/styles.css",
+    "css-minify": "cleancss --format breaksWith=lf --output dist/assets/styles/styles.min.css dist/assets/styles/styles.css",
     "src2dist": "cpy . '../dist/' --cwd=src",
     "clean": "del -f dist/",
     "build": "npm run clean && npm run compile-styles && npm run css-minify && npm run src2dist",
