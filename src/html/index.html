@@ -92,10 +92,10 @@
                         <a class="more" href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html" target="_blank">
                             [OWASP Cheat Sheet]
                         </a>
-                        <a class="more" id="resultF" href="https://securityheaders.com" target="_blank">
+                        <a id="scanF" class="more" target="_blank">
                             [F]
                         </a>
-                        <a class="more" id="resultA" href="https://securityheaders.com" target="_blank">
+                        <a id="scanA" class="more" target="_blank">
                             [A+]
                         </a>
                     </li>
@@ -174,7 +174,7 @@
                             [more]
                         </a>
                         <a class="more" id="resultF" href="https://validator.w3.org/i18n-checker/check?uri=https%3A%2F%2Fhtaccess-samples.space%2Fencoding%2Fencoding.html#validate-by-uri+" target="_blank">
-                            [Verify]
+                            [verify]
                         </a>
                     </li>
                     <li>
@@ -183,7 +183,7 @@
                             [RFC 2616]
                         </a>
                         <a class="more" id="resultF" href="https://validator.w3.org/i18n-checker/check?uri=https%3A%2F%2Fhtaccess-samples.space%2Fencoding%2Fmissing-encoding.html#validate-by-uri+" target="_blank">
-                            [Verify]
+                            [verify]
                         </a>
                     </li>
                     <li>
@@ -192,7 +192,7 @@
                             [more]
                         </a>
                         <a class="more" id="resultF" href="https://validator.w3.org/i18n-checker/check?uri=https%3A%2F%2Fhtaccess-samples.space%2Fencoding%2Ffix%2Fmissing_encoding.html#validate-by-uri+" target="_blank">
-                            [Verify]
+                            [verify]
                         </a>
                     </li>
                 </ul>
@@ -220,11 +220,7 @@
             <!-- nothing yet -->
         </page-footer>
     </page-container>
-
-    <script>
-        document.getElementById("resultA").href = 'https://securityheaders.com/?q=' + location.hostname + '%2Fsecurity%2Fheaders%2F&followRedirects=on';
-        document.getElementById("resultF").href = 'https://securityheaders.com/?q=' + location.hostname + '%2F&followRedirects=on'; 
-    </script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 
 </html>
