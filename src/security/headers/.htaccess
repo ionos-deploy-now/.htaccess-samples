@@ -20,7 +20,7 @@
 
     # https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
     #
-    Header set Content-Security-Policy: "default-src 'self'; style-src 'self'"
+    Header set Content-Security-Policy: "default-src 'self'; script-src 'self'; style-src 'self'"
 
     # https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html#access-control-allow-origin
     # Detect and mitigate certain several types of attacks, including Cross-Site Scripting (XSS) and data injection attacks
@@ -52,7 +52,7 @@
 
     # https://owasp.org/www-project-secure-headers/#clear-site-data
     # Clear browsing data associated with the requesting website
-    Header set Clear-Site-Data: "cache, cookies, storage, executionContexts"
+    # Header set Clear-Site-Data: "cache, cookies, storage, executionContexts"
 
 	# https://owasp.org/www-project-secure-headers/#cache-control
     # Caching allowed with a cache duration of one week
