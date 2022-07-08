@@ -30,9 +30,8 @@
     "clean-css-cli": "^5.6.0",
     "node-sass": "^7.0.1",
     "cpy-cli": "^4.1.0",
-    "del-cli": "^4.0.1"
-  },
-  "dependencies": {
+    "del-cli": "^4.0.1",
+    "brotli-cli": "^1.0.3",
     "gzip-cli": "^1.2.0"
   }
 }
