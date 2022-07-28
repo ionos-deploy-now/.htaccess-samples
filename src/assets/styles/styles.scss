@@ -3,166 +3,212 @@ $background: linear-gradient(to bottom, #007aff 0%, #005dc0 100%);
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    color: $color;
-    background-image: $background;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.5vw;
-    font-weight: 500;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: $color;
+  background-image: $background;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 500;
 }
 
 h1,
 h2 {
-    margin: 0;
-    padding: 0;
-    color: $color;
+  margin: 0;
+  padding: 0;
+  color: $color;
 }
 
 h1 {
-    margin: 1em 0 1em 0;
-    font-size: 6vw;
-    letter-spacing: 2px;
-    font-weight: 600;
-    white-space: nowrap;
-    span {
-        font-weight: 100;
-    }
-    text-align: center;
+  margin: 1em 0 1em 0;
+  font-size: 6vw;
+  letter-spacing: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+  span {
+    font-weight: 100;
+  }
+  text-align: center;
 }
 
 h2 {
-    text-align: left;
-    font-size: 2vw;
-    font-weight: 600;
+  text-align: left;
+  font-size: 2vw;
+  font-weight: 600;
 }
 
 xxl-font {
-    text-align: center;
-    font-size: 10vw;
-    font-weight: 400;
+  text-align: center;
+  font-size: 10vw;
+  font-weight: 400;
+  text-shadow: #0062cc 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px, #0062cd 4px 4px, #0062cd 5px 5px, #0062cd 6px 6px,
+    #0062cd 7px 7px, #0062ce 8px 8px, #0063ce 9px 9px, #0063ce 10px 10px, #0063ce 11px 11px, #0063cf 12px 12px,
+    #0063cf 13px 13px, #0063cf 14px 14px, #0063cf 15px 15px, #0063d0 16px 16px, #0064d0 17px 17px, #0064d0 18px 18px,
+    #0064d0 19px 19px, #0064d1 20px 20px, #0064d1 21px 21px, #0064d1 22px 22px, #0064d1 23px 23px, #0064d2 24px 24px,
+    #0065d2 25px 25px, #0065d2 26px 26px, #0065d2 27px 27px, #0065d3 28px 28px, #0065d3 29px 29px, #0065d3 30px 30px,
+    #0065d3 31px 31px, #0065d4 32px 32px, #0065d4 33px 33px, #0066d4 34px 34px, #0066d4 35px 35px, #0066d5 36px 36px,
+    #0066d5 37px 37px, #0066d5 38px 38px, #0066d5 39px 39px, #0066d6 40px 40px;
+  @media screen and (max-width: 800px) {
     text-shadow: #0062cc 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px, #0062cd 4px 4px, #0062cd 5px 5px, #0062cd 6px 6px,
-        #0062cd 7px 7px, #0062ce 8px 8px, #0063ce 9px 9px, #0063ce 10px 10px, #0063ce 11px 11px, #0063cf 12px 12px,
-        #0063cf 13px 13px, #0063cf 14px 14px, #0063cf 15px 15px, #0063d0 16px 16px, #0064d0 17px 17px, #0064d0 18px 18px,
-        #0064d0 19px 19px, #0064d1 20px 20px, #0064d1 21px 21px, #0064d1 22px 22px, #0064d1 23px 23px, #0064d2 24px 24px,
-        #0065d2 25px 25px, #0065d2 26px 26px, #0065d2 27px 27px, #0065d3 28px 28px, #0065d3 29px 29px, #0065d3 30px 30px,
-        #0065d3 31px 31px, #0065d4 32px 32px, #0065d4 33px 33px, #0066d4 34px 34px, #0066d4 35px 35px, #0066d5 36px 36px,
-        #0066d5 37px 37px, #0066d5 38px 38px, #0066d5 39px 39px, #0066d6 40px 40px;
-    @media screen and (max-width: 800px) {
-        text-shadow: #0062cc 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px, #0062cd 4px 4px, #0062cd 5px 5px,
-            #0062cd 6px 6px, #0062cd 7px 7px, #0062ce 8px 8px, #0063ce 9px 9px, #0063ce 10px 10px, #0063ce 11px 11px,
-            #0063cf 12px 12px, #0063cf 13px 13px, #0063cf 14px 14px, #0063cf 15px 15px, #0063d0 16px 16px,
-            #0064d0 17px 17px, #0064d0 18px 18px, #0064d0 19px 19px, #0064d1 20px 20px;
-    }
+      #0062cd 7px 7px, #0062ce 8px 8px, #0063ce 9px 9px, #0063ce 10px 10px, #0063ce 11px 11px, #0063cf 12px 12px,
+      #0063cf 13px 13px, #0063cf 14px 14px, #0063cf 15px 15px, #0063d0 16px 16px, #0064d0 17px 17px, #0064d0 18px 18px,
+      #0064d0 19px 19px, #0064d1 20px 20px;
+  }
 }
 
 a:link {
-    color: $color;
-    text-decoration: none;
+  color: $color;
+  text-decoration: none;
 }
 
 a:visited {
-    color: $color;
-    text-decoration: none;
+  color: $color;
+  text-decoration: none;
 }
 
 a:hover {
-    color: $color;
-    text-decoration: underline;
+  color: $color;
+  text-decoration: underline;
 }
 
 a:active {
-    color: $color;
-    text-decoration: underline;
+  color: $color;
+  text-decoration: underline;
 }
 
 p {
-    font-style: normal;
-    font-weight: 300;
+  font-style: normal;
+  font-weight: 300;
 }
 
 page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 page-header {
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 page-content {
-    flex: 1 1 auto;
-    margin: 0 10vw 0 10vw;
-    @media screen and (max-width: 800px) {
-        margin: 0 5vw 0 5vw;
-    }
+  flex: 1 1 auto;
+  margin: 0 5vw 0 5vw;
 }
 
 page-footer {
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: row;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 flex-space {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 @mixin box {
-    margin: 1vmax 0 1vmax 0;
-    padding: 1vh 3vw 1vh 3vw;
-    border-radius: 1.2em;
-    align-items: center;
-    justify-content: center;
+  margin: 1vmax 0 1vmax 0;
+  padding: 1vh 3vw 1vh 3vw;
+  border-radius: 1.2em;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button {
+  display: flex;
+  flex-direction: row;
+  padding: 0.8em 1.6em 0.8em 1.6em;
+  border-radius: 0.5em;
+  color: $color;
+  background: #007aff;
+  cursor: pointer;
+  &:active {
+    background: #ffaa0f;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  svg {
+    display: block;
+    width: 2vw;
+    height: auto;
+    fill: $color;
+    text-decoration: none;
+  }
+  span {
+    margin-left: 1em;
+    font-size: 2vw;
+    font-weight: 500;
+  }
 }
 
 .alert-box {
-    @include box;
+  @include box;
+  color: #484848;
+  background: #ffffff;
+  a {
     color: #484848;
-    background: #ffffff;
-    a {
-        color: #484848;
-    }
+  }
 }
 
 .content-box {
-    @include box;
-    background: #005dc0;
-}
-
-.go-back {
-    text-align: center;
-    color: $color;
-    font-weight: 600;
-    font-size: 4vw;
-    cursor: pointer;
-}
-
-.text-center {
-    text-align: center;
+  @include box;
+  background: #005dc0;
 }
 
 .more {
-    font-weight: 300;
-    font-size: 1vw;
-    cursor: pointer;
+  font-weight: 300;
+  font-size: 1vw;
+  cursor: pointer;
 }
 
-#github {
-    color: $color;
-    font-size: 4vw;
-    text-decoration: none;
+.github-icon {
+  display: block;
+  width: 4vw;
+  height: auto;
+  fill: $color;
+  text-decoration: none;
 }
 
-#github:hover {
-    color: #d4d4d4;
+.github-icon:hover {
+  fill: #d4d4d4;
+}
+
+.clipboard-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  color: $color;
+  font-weight: 300;
+  font-size: 2vw;
+  border-radius: 0.5em;
+  background: #000000;
+  white-space: normal;
+}
+
+.clipboard-button {
+  @include button;
+}
+
+.clipboard-input {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.history-back-button {
+  @include button;
+  margin: 1em 0 1em 0;
 }

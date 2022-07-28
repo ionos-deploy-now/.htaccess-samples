@@ -6,9 +6,23 @@
     <meta name="keywords" content="IONOS htaccess Apache" />
     <meta name="description" content="IONOS htaccess sample project" />
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets//favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets//favicon/favicon-16x16.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets//favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets//favicon/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="/assets/styles/styles.min.css" />
   </head>
 
@@ -16,18 +30,33 @@
     <page-container>
       <page-header>
         <flex-space>
-          <h1><xxl-font>Http 200</xxl-font></h1>
+          <h1><xxl-font id="http-status-code"></xxl-font></h1>
         </flex-space>
       </page-header>
       <page-content>
-        <flex-space>
-          <a id="go-back" class="go-back">Go Back</a>
-        </flex-space>
+        <div class="clipboard-box">
+          <div id="clipboard-input" class="clipboard-input">localhost</div>
+          <a id="clipboard-button" class="clipboard-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M18 6v-6h-18v18h6v6h18v-18h-6zm-16 10v-14h14v4h-10v10h-4z"
+              />
+            </svg>
+            <span>Copy</span>
+          </a>
+        </div>
       </page-content>
       <page-footer>
-        <!-- nothing yet -->
+        <a id="history-back-button" class="history-back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M13.427 3.021h-7.427v-3.021l-6 5.39 6 5.61v-3h7.427c3.071 0 5.561 2.356 5.561 5.427 0 3.071-2.489 5.573-5.561 5.573h-7.427v5h7.427c5.84 0 10.573-4.734 10.573-10.573s-4.733-10.406-10.573-10.406z"
+            />
+          </svg>
+          <span>History back</span>
+        </a>
       </page-footer>
     </page-container>
-    <script type="text/javascript" src="/assets/js/back.js"></script>
+    <script type="text/javascript" src="/assets/js/util.js"></script>
   </body>
 </html>
