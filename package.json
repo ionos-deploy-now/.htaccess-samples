@@ -27,10 +27,10 @@
     "node": ">=16"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.6.0",
+    "clean-css-cli": "^5.6.1",
     "node-sass": "^7.0.1",
     "cpy-cli": "^4.1.0",
-    "del-cli": "^4.0.1",
+    "del-cli": "^5.0.0",
     "brotli-cli": "^1.0.3",
     "gzip-cli": "^1.2.0"
   }
