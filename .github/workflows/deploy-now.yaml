@@ -36,7 +36,7 @@ jobs:
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/setup-node@v1
         with:
-          node-version: v17.x
+          node-version: v18.x
 
       - name: Build Node assets
         env:
