@@ -34,6 +34,35 @@
         </flex-space>
       </page-header>
       <page-content>
+        <div class="devtools-box">
+          <h2>
+            <remark-bold>Note</remark-bold>: Keep your browser DevTools open to
+            see what's happening on network level.
+          </h2>
+          <div>
+            <a
+              href="https://developer.chrome.com/docs/devtools/shortcuts/"
+              target="_blank"
+            >
+              [Chrome]
+            </a>
+            <a
+              href="https://firefox-source-docs.mozilla.org/devtools-user/index.html"
+              target="_blank"
+            >
+              [Firefox]
+            </a>
+            <a
+              href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/shortcuts/"
+              target="_blank"
+            >
+              [Edge]
+            </a>
+          </div>
+        </div>
+        <flex-space>
+          <span>or</span>
+        </flex-space>
         <div class="clipboard-box">
           <div id="clipboard-input" class="clipboard-input">localhost</div>
           <a id="clipboard-button" class="clipboard-button">
@@ -42,7 +71,7 @@
                 d="M18 6v-6h-18v18h6v6h18v-18h-6zm-16 10v-14h14v4h-10v10h-4z"
               />
             </svg>
-            <span>Copy</span>
+            <button-caption>Copy</button-caption>
           </a>
         </div>
       </page-content>
@@ -53,7 +82,7 @@
               d="M13.427 3.021h-7.427v-3.021l-6 5.39 6 5.61v-3h7.427c3.071 0 5.561 2.356 5.561 5.427 0 3.071-2.489 5.573-5.561 5.573h-7.427v5h7.427c5.84 0 10.573-4.734 10.573-10.573s-4.733-10.406-10.573-10.406z"
             />
           </svg>
-          <span>History back</span>
+          <button-caption>History back</button-caption>
         </a>
       </page-footer>
     </page-container>
